@@ -7,7 +7,7 @@
     <title>Muhammad Sharjeel Anjum - Personal Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -15,16 +15,26 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #3f51b5;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 10px;
+            font-size: 2.5rem;
+            animation: slideInLeft 1s ease-out;
         }
 
         nav {
-            margin: 0 auto;
+            margin: 20px auto;
             max-width: 1000px;
             text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         nav a {
@@ -32,6 +42,24 @@
             text-decoration: none;
             color: #fff;
             font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            background-color: #bbb;
+            background-image: url('https://via.placeholder.com/150');
+            background-size: cover;
+            animation: fadeIn 2s ease-in-out;
         }
 
         section {
@@ -40,19 +68,54 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeInUp 1s ease-out;
         }
 
-        h1, h2 {
-            color: #333;
+        h2 {
+            color: #3f51b5;
         }
 
         footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #333;
+            background-color: #3f51b5;
             color: #fff;
             position: relative;
             width: 100%;
+            bottom: 0;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -70,9 +133,11 @@
         </nav>
     </header>
 
+    <div class="profile-pic"></div>
+
     <section id="about">
         <h2>About Me</h2>
-        <p>I am an AI researcher and machine learning engineer with over 2 years of experience developing machine/deep learning algorithms to solve real-world problems. My research focuses on adversarial machine learning, automation in real-world scenarios, specifically worker safety and health, fatigue monitoring, and muscle fatigue. I also develop and utilize AI-based approaches to solve various real-world problems.</p>
+        <p>I am an AI researcher and machine learning engineer with over 4 years of experience in developing machine/deep learning algorithms for real-world applications. My expertise lies in adversarial machine learning, real-world automation, worker safety, and health monitoring, with a specific focus on fatigue and muscle fatigue. I strive to leverage AI to solve complex problems and enhance safety in various domains.</p>
     </section>
 
     <section id="projects">
@@ -90,12 +155,12 @@
         <p>My research interests include:</p>
         <ul>
             <li>Adversarial Machine Learning</li>
-            <li>Machine Learning-based Automation in Real-world Scenarios</li>
+            <li>Automation in Real-World Scenarios</li>
             <li>Worker Safety and Health Monitoring</li>
-            <li>Fatigue Monitoring and Muscle Fatigue</li>
-            <li>AI-based Solutions for Real-world Problems</li>
+            <li>Fatigue and Muscle Fatigue Monitoring</li>
+            <li>AI-Driven Solutions for Complex Problems</li>
         </ul>
-        <p>More information about my research can be found on my <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
+        <p>For more detailed information, you can visit my <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
     </section>
 
     <section id="publications">
