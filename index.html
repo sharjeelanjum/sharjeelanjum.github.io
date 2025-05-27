@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="o1w9b4LezLg4WeMHcEwnQ3uMfAwWTact-ePjJCdeKj4" />
 
-    <title>Sharjeel Anjum </title>
+    <title>Sharjeel Anjum</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,6 +98,7 @@
                 transform: translateX(-100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(0);
                 opacity: 1;
@@ -108,6 +109,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -118,6 +120,7 @@
                 transform: translateY(20px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -181,22 +184,21 @@
         </ul>
     </section>
 
-     <section id="conferences">
+    <section id="conferences">
         <h2>Conference Papers</h2>
         <p>Here are some selected conference papers:</p>
         <ul>
             <li><strong>Framework for Immersive Embodied Interaction Development in Construction Education and Training</strong> - CSCE Niagara Falls, Canada, 2024</li>
-            <li><strong>Artificial Intelligence-based Safety Helmet Recognition on Embedded Devices to Enhance Safety Monitoring Process</strong> - Authors: Sharjeel Anjum, Syed Farhan Alam, Rabia Khalid, Chansik Park. IEEE International Conference On Artificial Intelligence In Engineering And Technology, 2022 (Published).</li>
-            <li><strong>A Pull-Reporting Approach for Floor Opening Detection using Deep-Learning on Embedded Devices</strong> - Authors: Sharjeel Anjum, Rabia Khalid, M.Khan, N.Khan, Chansik Park. 38th International Symposium on Automation and Robotics in Construction, 2022 (Published).</li>
-            <li><strong>A Worker-Driven Approach for Opening Detection by Integrating Computer Vision and Built-in Inertia Sensors on Embedded Devices</strong> - Authors: Sharjeel Anjum, Muhammad Sibtain, Rabia Khalid, M.Khan, and Chansik Park*. 12th International Conference on Construction and Project Management, 2022 (Published)</li>
-            <li><strong>Fall and Normal Activity Classification via Multiple Wearable Sensors</strong> - Authors: Rabia Khalid, Sharjeel Anjum, Chansik Park. IEEE International Conference On Artificial Intelligence In Engineering And Technology, 2022 (Published).</li>
-            <li><strong>IMU-based Smart Safety Hook for Fall Prevention at Construction Sites</strong> - Authors: M.Khan, Rabia Khalid, Sharjeel Anjum, N.Khan, Chansik Park. TENSYMP Conference: 10th IEEE Region Symposium, 2022 (Published).</li>
-            <li><strong>A Deep Learning based Detection of Fall Potent for Lone Construction Worker</strong> - Authors: N.Khan, Sharjeel Anjum, Rabia Khalid, Junsung Park, Chansik Park. 38th International Symposium on Automation and Robotics in Construction, 2022 (Published).</li>
-            <li><strong>Image Recognition and Blockchain Network Integrated Construction Site Safety Management System Framework</strong> - Authors: Dohyeong Kim, Jaehun Yang, Sharjeel Anjum, and Doyeop Lee. 12th International Conference on Construction and Project Management, 2022 (Published)</li>
-            <li><strong>AprilTag and Stereo Visual Inertial Odometry (A-SVIO) based Mobile Assests Localization at Indoor Construction Site</strong> - Authors: Rabia Khalid, M.Khan, Sharjeel Anjum, Junsung Park, Doyep Lee, and Chansik Park*. ICCPM Conference: 12th International Conference on Construction and Project Management, 2022 (Published)</li>
+            <li><strong>Artificial Intelligence-based Safety Helmet Recognition on Embedded Devices to Enhance Safety Monitoring Process</strong> - IEEE ICAIET, 2022</li>
+            <li><strong>A Pull-Reporting Approach for Floor Opening Detection using Deep-Learning on Embedded Devices</strong> - ISARC, 2022</li>
+            <li><strong>A Worker-Driven Approach for Opening Detection by Integrating Computer Vision and Built-in Inertia Sensors</strong> - ICCPM, 2022</li>
+            <li><strong>Fall and Normal Activity Classification via Multiple Wearable Sensors</strong> - IEEE ICAIET, 2022</li>
+            <li><strong>IMU-based Smart Safety Hook for Fall Prevention at Construction Sites</strong> - IEEE TENSYMP, 2022</li>
+            <li><strong>A Deep Learning based Detection of Fall Potent for Lone Construction Worker</strong> - ISARC, 2022</li>
+            <li><strong>Image Recognition and Blockchain Network Integrated Construction Site Safety Management</strong> - ICCPM, 2022</li>
+            <li><strong>AprilTag and SVIO-based Mobile Assets Localization at Indoor Construction Site</strong> - ICCPM, 2022</li>
         </ul>
     </section>
-
 
     <section id="contact">
         <h2>Contact Me</h2>
@@ -209,6 +211,21 @@
 
     <footer>
         <p>&copy; 2024 Muhammad Sharjeel Anjum. All rights reserved.</p>
+        <p>Total Visitors: <span id="visitor-count">Loading...</span></p>
+        <script>
+            const counterNamespace = 'sharjeel-anjum.com';
+            const counterKey = 'homepage';
+
+            fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('visitor-count').textContent = data.value;
+                })
+                .catch(err => {
+                    console.error('Visitor counter error:', err);
+                    document.getElementById('visitor-count').textContent = 'Unavailable';
+                });
+        </script>
     </footer>
 
 </body>
