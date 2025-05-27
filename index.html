@@ -212,21 +212,9 @@
 
     <footer>
         <p>&copy; 2024 Muhammad Sharjeel Anjum. All rights reserved.</p>
-        <p>Total Visitors: <span id="visitor-count">Loading...</span></p>
-        <script>
-            const counterNamespace = 'sharjeel-anjum.com';
-            const counterKey = 'homepage';
-
-            fetch(`https://api.countapi.dev/hit/${counterNamespace}/${counterKey}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('visitor-count').textContent = data.value;
-                })
-                .catch(err => {
-                    console.error('Visitor counter error:', err);
-                    document.getElementById('visitor-count').textContent = 'Unavailable';
-                });
-        </script>
+        <p>Total Visitors: 
+            <img src="https://www.simplehitcounter.com/hit.php?uid=2823241&f=255&b=ffffff" alt="Visitor Counter">
+        </p>
     </footer>
 
 </body>
