@@ -1,224 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Sharjeel Anjum - AI Researcher specializing in adversarial machine learning, automation in real-world scenarios, and worker safety with a focus on central and muscle fatigue monitoring." />
-    <meta name="keywords"
-        content="Sharjeel Anjum, AI Researcher, Machine Learning, Adversarial Machine Learning, Automation, Worker Safety, Fatigue Monitoring, Muscle Fatigue, Construction Safety" />
-    <meta name="author" content="Sharjeel Anjum" />
-    <meta name="robots" content="index, follow" />
-    <meta name="google-site-verification" content="o1w9b4LezLg4WeMHcEwnQ3uMfAwWTact-ePjJCdeKj4" />
-
-    <title>Sharjeel Anjum</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sharjeel Anjum - AI Researcher specializing in adversarial machine learning, automation in real-world scenarios, and worker safety with a focus on central and muscle fatigue monitoring.">
+    <meta name="keywords" content="Sharjeel Anjum, AI Researcher, Machine Learning, Adversarial Machine Learning, Automation, Worker Safety, Fatigue Monitoring">
+    <meta name="author" content="Sharjeel Anjum">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="o1w9b4LezLg4WeMHcEwnQ3uMfAwWTact-ePjJCdeKj4">
+    <title>Muhammad Sharjeel Anjum | AI Researcher</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #eef2f3, #ffffff);
-            color: #333;
+            box-sizing: border-box;
         }
 
-       header {
-            background-color: #000000; /* Black */
-            color: #fff;
-            padding: 30px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            animation: slideInLeft 1s ease-out;
+        :root {
+            --primary: #0066cc;
+            --secondary: #004999;
+            --accent: #00a8ff;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-alt: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
-        nav {
-            margin: 15px 0;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s, transform 0.2s;
-        }
-
-        nav a:hover {
-            color: #ffd54f;
-            transform: scale(1.05);
-        }
-
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            margin: 20px auto;
-            background-image: url('https://via.placeholder.com/160');
-            background-size: cover;
-            border: 4px solid #3f51b5;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        section {
-            margin: 30px auto;
-            max-width: 1000px;
-            padding: 25px;
-            background-color: #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            border-radius: 10px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        h2 {
-            color: #3f51b5;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            padding-left: 20px;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
+            color: #333;
+            background: var(--light);
+            overflow-x: hidden;
         }
 
-       footer {
-            background-color: #000000; /* Black */
-            color: #fff;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ffffff" fill-opacity="0.05" width="1200" height="600"/><g><rect x="0" y="0" width="100" height="100" fill="%23ffffff" fill-opacity="0.03"/><rect x="200" y="100" width="100" height="100" fill="%23ffffff" fill-opacity="0.03"/><rect x="400" y="200" width="100" height="100" fill="%23ffffff" fill-opacity="0.03"/></g></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .experience-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .experience-card .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .experience-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Research Interests */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .research-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .research-card h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Publications */
+        .publications-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .publication-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .publication-item h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .publication-meta {
+            color: #667eea;
+            font-weight: 600;
             font-size: 0.95rem;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .impact-factor {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-left: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            opacity: 0.8;
         }
 
         /* Animations */
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
         @keyframes fadeInUp {
             from {
-                transform: translateY(30px);
                 opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            to {
-                transform: translateY(0);
-                opacity: 1;
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .experience-grid,
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-
 <body>
+    <nav>
+        <div class="container">
+            <div class="logo">SA</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <header>
-        <h1>Muhammad Sharjeel Anjum</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <div class="profile-pic"></div>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am an AI researcher and machine learning engineer with over 4 years of experience in developing machine/deep learning algorithms for real-world applications. My expertise lies in adversarial machine learning, real-world automation, worker safety, and health monitoring, with a specific focus on fatigue and muscle fatigue. I strive to leverage AI to solve complex problems and enhance safety in various domains.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Muhammad Sharjeel Anjum</h1>
+            <p class="subtitle">AI Researcher & Machine Learning Engineer</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">11.45</span>
+                    <span class="stat-label">Highest IF</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>AI Researcher at IvWorks Company (South Korea):</strong> Worked on identifying anomalies in semiconductor manufacturing using time series and vision data.</li>
-            <li><strong>Research Assistant at CONTIL (Chung-Ang University):</strong> Developed ML/DL models for construction worker safety using embedded computer vision systems.</li>
-            <li><strong>Instructor at Kainat School System:</strong> Taught computer science and lab courses to middle school students.</li>
-        </ul>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content fade-in">
+                <p class="about-text">
+                    I am an AI researcher and machine learning engineer with over 4 years of experience in developing machine and deep learning algorithms for real-world applications. My expertise lies in adversarial machine learning, real-world automation, worker safety, and health monitoring, with a specific focus on fatigue and muscle fatigue. I strive to leverage AI to solve complex problems and enhance safety in various domains, bridging the gap between cutting-edge research and practical implementation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card fade-in">
+                    <h3>AI Researcher</h3>
+                    <span class="company">IvWorks Company, South Korea</span>
+                    <p>Developed and implemented machine learning solutions for identifying anomalies in semiconductor manufacturing processes using time series analysis and computer vision techniques.</p>
+                </div>
+
+                <div class="experience-card fade-in">
+                    <h3>Research Assistant</h3>
+                    <span class="company">CONTIL, Chung-Ang University</span>
+                    <p>Designed and deployed ML/DL models for construction worker safety monitoring using embedded computer vision systems, contributing to safer work environments through innovative AI solutions.</p>
+                </div>
+
+                <div class="experience-card fade-in">
+                    <h3>Computer Science Instructor</h3>
+                    <span class="company">Kainat School System</span>
+                    <p>Taught computer science curriculum and laboratory courses to middle school students, fostering interest in technology and computational thinking.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="research">
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Adversarial Machine Learning</li>
-            <li>Automation in Real-World Scenarios</li>
-            <li>Worker Safety and Health Monitoring</li>
-            <li>Central Fatigue and Muscle Fatigue Monitoring</li>
-            <li>AI-Driven Solutions for Complex Problems</li>
-        </ul>
-        <p>Visit my <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Google Scholar profile</a> for full details.</p>
+        <div class="container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card fade-in">
+                    <div class="research-icon">🤖</div>
+                    <h4>Adversarial Machine Learning</h4>
+                </div>
+                <div class="research-card fade-in">
+                    <div class="research-icon">⚙️</div>
+                    <h4>Real-World Automation</h4>
+                </div>
+                <div class="research-card fade-in">
+                    <div class="research-icon">🛡️</div>
+                    <h4>Worker Safety Monitoring</h4>
+                </div>
+                <div class="research-card fade-in">
+                    <div class="research-icon">💪</div>
+                    <h4>Fatigue Detection Systems</h4>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank" class="btn">View Google Scholar Profile</a>
+            </div>
+        </div>
     </section>
 
     <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>Rotation Error Detection of GaN Substrate in MBE using Ensemble Learning</strong> – ACS Publisher (IF: 4.1)</li>
-            <li><strong>Fall Prevention From Ladders Using Deep Learning-Based Height Assessment</strong> – IEEE Access (IF: 4.34)</li>
-            <li><strong>Deep Learning Mitosis Recognition for Uterine Leiomyosarcoma</strong> – Cancer Journal (IF: 7.6)</li>
-            <li><strong>IoT-based Safety Hook Monitoring for Fall Prevention</strong> – Automation in Construction (IF: 11.45)</li>
-            <li><strong>Scaffold Fall Prevention Using Vision & IoT</strong> – J. of Construction Eng. Mgmt (IF: 3.9)</li>
-        </ul>
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item fade-in">
+                    <h3>IoT-based Safety Hook Monitoring for Fall Prevention</h3>
+                    <p class="publication-meta">Automation in Construction <span class="impact-factor">IF: 11.45</span></p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Deep Learning Mitosis Recognition for Uterine Leiomyosarcoma</h3>
+                    <p class="publication-meta">Cancer Journal <span class="impact-factor">IF: 7.6</span></p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Fall Prevention From Ladders Using Deep Learning-Based Height Assessment</h3>
+                    <p class="publication-meta">IEEE Access <span class="impact-factor">IF: 4.34</span></p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Rotation Error Detection of GaN Substrate in MBE using Ensemble Learning</h3>
+                    <p class="publication-meta">ACS Publisher <span class="impact-factor">IF: 4.1</span></p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Scaffold Fall Prevention Using Vision & IoT</h3>
+                    <p class="publication-meta">Journal of Construction Engineering and Management <span class="impact-factor">IF: 3.9</span></p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="conferences">
-        <h2>Conference Papers</h2>
-        <ul>
-            <li><strong>Immersive Interaction Framework for Construction Training</strong> – CSCE, Canada, 2024</li>
-            <li><strong>AI-based Safety Helmet Recognition</strong> – IEEE ICAIET, 2022</li>
-            <li><strong>Deep Learning Floor Opening Detection</strong> – ISARC, 2022</li>
-            <li><strong>CV and Sensor Fusion for Opening Detection</strong> – ICCPM, 2022</li>
-            <li><strong>Wearable-Based Fall and Activity Classification</strong> – IEEE ICAIET, 2022</li>
-            <li><strong>IMU-based Smart Safety Hook</strong> – IEEE TENSYMP, 2022</li>
-            <li><strong>Fall Potential Detection for Lone Workers</strong> – ISARC, 2022</li>
-            <li><strong>Blockchain & CV for Site Safety Management</strong> – ICCPM, 2022</li>
-            <li><strong>AprilTag & SVIO Indoor Localization</strong> – ICCPM, 2022</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <ul>
-            <li>Email: malikanjum833@gmail.com</li>
-            <li>Location: College Station, Texas</li>
-        </ul>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>malikanjum833@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>College Station, Texas</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-    <p>&copy; 2024 Muhammad Sharjeel Anjum. All rights reserved.</p>
-    <p style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-        Total Visitors:
-        <script type="text/javascript" src="//counter.websiteout.net/js/7/0/0/0"></script>
-    </p>
-</footer>
+        <p>&copy; 2024 Muhammad Sharjeel Anjum. All Rights Reserved.</p>
+        <p style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+            Total Visitors:
+            <script type="text/javascript" src="//counter.websiteout.net/js/7/0/0/0"></script>
+        </p>
+    </footer>
 
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
-
 </html>
