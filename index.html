@@ -387,6 +387,138 @@
             margin-left: 10px;
         }
 
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .award-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::before {
+            content: '🏆';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.05;
+            transform: rotate(15deg);
+        }
+
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .award-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .award-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .award-organization {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .award-year {
+            color: #999;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .award-amount {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-content {
+            padding: 25px;
+        }
+
+        .gallery-content h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .gallery-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
         /* Contact Section */
         .contact-section {
             background: var(--gradient);
@@ -496,7 +628,9 @@
             }
 
             .experience-grid,
-            .research-grid {
+            .research-grid,
+            .awards-grid,
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -523,6 +657,8 @@
                 <a href="#experience">Experience</a>
                 <a href="#research">Research</a>
                 <a href="#publications">Publications</a>
+                <a href="#awards">Awards</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -647,74 +783,103 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="awards">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>malikanjum833@gmail.com</p>
+            <h2 class="section-title">Awards & Honors</h2>
+            <div class="awards-grid">
+                <div class="award-card fade-in">
+                    <div class="award-icon">🏆</div>
+                    <h3>Graduate Hagler Fellow</h3>
+                    <span class="award-organization">Hagler Institute for Advanced Study, Texas A&M University</span>
+                    <span class="award-amount">$30,000 Stipend</span>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>College Station, Texas</p>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">📜</div>
+                    <h3>Patent Award</h3>
+                    <span class="award-organization">Texas A&M Innovation</span>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">📊</div>
+                    <h3>Data Science Ambassador Scholarship</h3>
+                    <span class="award-organization">Texas A&M Institute of Data Science</span>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">🎓</div>
+                    <h3>Chung-Ang Young Scientist Scholarship</h3>
+                    <span class="award-organization">Chung-Ang University</span>
+                    <span class="award-year">2020-2022</span>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">⭐</div>
+                    <h3>Department Level Scholarship</h3>
+                    <span class="award-organization">Chung-Ang University</span>
+                    <span class="award-year">2021</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Muhammad Sharjeel Anjum. All Rights Reserved.</p>
-        <p style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-            Total Visitors:
-            <script type="text/javascript" src="//counter.websiteout.net/js/7/0/0/0"></script>
-        </p>
-    </footer>
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 1">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>AI Research Project</h3>
+                        <p>Exploring cutting-edge applications of machine learning in real-world scenarios.</p>
+                    </div>
+                </div>
 
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 2">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Worker Safety System</h3>
+                        <p>Developing innovative safety monitoring solutions for construction sites.</p>
+                    </div>
+                </div>
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 3">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Deep Learning Applications</h3>
+                        <p>Implementing advanced neural networks for complex problem-solving.</p>
+                    </div>
+                </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 4">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Computer Vision Research</h3>
+                        <p>Advancing object detection and recognition technologies.</p>
+                    </div>
+                </div>
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 5">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>IoT Integration</h3>
+                        <p>Connecting intelligent systems for enhanced automation and monitoring.</p>
+                    </div>
+                </div>
 
-        // Navbar scroll effect
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                nav.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
-            } else {
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-    </script>
-</body>
-</html>
+                <div class="gallery-item fade-in">
+                    <div class="gallery-image">
+                        <img src="generated-image (2).png" alt="Research Work 6">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Adversa
