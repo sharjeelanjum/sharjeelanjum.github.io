@@ -1,490 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sharjeel Anjum - AI Researcher with 5+ years experience specializing in adversarial machine learning, automation, worker safety, and physiological data for fatigue monitoring.">
-    <meta name="keywords" content="Sharjeel Anjum, AI Researcher, Machine Learning, Deep Learning, Adversarial Machine Learning, Automation, Worker Safety, Fatigue Monitoring, Physiological Data, Texas A&M, Chung-Ang">
-    <meta name="author" content="Sharjeel Anjum">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="o1w9b4LezLg4WeMHcEwnQ3uMfAwWTact-ePjJCdeKj4">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sharjeelanjum.github.io/">
-    <meta property="og:title" content="Sharjeel Anjum | AI Researcher">
-    <meta property="og:description" content="AI Researcher focusing on adversarial ML, automation, worker safety, and physiological data for personalized fatigue monitoring.">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sharjeelanjum.github.io/">
-    <meta property="twitter:title" content="Sharjeel Anjum | AI Researcher">
-    <meta property="twitter:description" content="AI Researcher and ML engineer with experience in worker safety, automation, and physiological data modelling.">
-    <title>Sharjeel Anjum | AI Researcher</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/unicons@0.0.3/css/unicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{
-            --bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--card:#16161f;
-            --border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.1);
-            --text:#f0f0f5;--text2:#a0a0b8;--text3:#6c6c80;
-            --accent:#818cf8;--accent2:#6366f1;--accent3:#4f46e5;
-            --green:#34d399;--amber:#fbbf24;--rose:#f43f5e;
-            --gradient:linear-gradient(135deg,#818cf8 0%,#c084fc 50%,#f472b6 100%);
-            --gradient2:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
-            --glow:0 0 60px rgba(129,140,248,.15);
-            --sans:'Plus Jakarta Sans',system-ui,sans-serif;
-            --serif:'Instrument Serif',Georgia,serif;
-            --mono:'JetBrains Mono',monospace;
-            --nav-w:260px;
-        }
-        html{scroll-behavior:smooth;font-size:16px}
-        body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-        a{color:var(--accent);text-decoration:none;transition:.2s}a:hover{color:#c084fc}
-        img{max-width:100%;display:block}
-        ::selection{background:rgba(129,140,248,.25)}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sharjeel Anjum - AI Researcher and PhD student at Texas A&M University specializing in adversarial machine learning, DoD- and NSF-funded fatigue monitoring, worker safety systems, and physiological data science.">
+<meta name="keywords" content="Sharjeel Anjum, AI Researcher, Machine Learning, Deep Learning, Adversarial Machine Learning, Automation, Worker Safety, Fatigue Monitoring, Physiological Data, Texas A&M, Chung-Ang, Department of Defense, DoD Grant, National Science Foundation, NSF, Mentorship, Data Science Ambassador">
+<meta name="author" content="Sharjeel Anjum">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="o1w9b4LezLg4WeMHcEwnQ3uMfAwWTact-ePjJCdeKj4">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sharjeelanjum.github.io/">
+<meta property="og:title" content="Sharjeel Anjum | AI Researcher">
+<meta property="og:description" content="AI Researcher focusing on adversarial ML, DoD- and NSF-funded fatigue monitoring, automation, and worker safety.">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Sharjeel Anjum | AI Researcher">
+<title>Sharjeel Anjum | AI Researcher, Texas A&M University</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#500000;
+  --maroon-dark:#3a0000;
+  --ink:#1c1c1e;
+  --body:#3f3f46;
+  --muted:#767680;
+  --line:#e5e2dd;
+  --paper:#fdfcfa;
+  --paper2:#f6f4f0;
+  --tag-bg:#f1eeea;
+  --serif:'Source Serif 4',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--body);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--maroon);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:760px;margin:0 auto;padding:0 1.75rem}
+::selection{background:rgba(80,0,0,.12)}
 
-        /* ===== SIDEBAR NAV ===== */
-        .sidebar{position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100;padding:2rem 1.25rem}
-        .sidebar-brand{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem}
-        .sidebar-avatar{width:42px;height:42px;border-radius:10px;overflow:hidden;border:2px solid var(--accent);flex-shrink:0}
-        .sidebar-avatar img{width:100%;height:100%;object-fit:cover}
-        .sidebar-name{font-weight:700;font-size:.95rem;color:var(--text);line-height:1.2}
-        .sidebar-role{font-size:.7rem;color:var(--text3);font-weight:500}
-        .sidebar-links{margin-top:2rem;display:flex;flex-direction:column;gap:.15rem;flex:1}
-        .sidebar-links a{display:flex;align-items:center;gap:.6rem;padding:.55rem .75rem;border-radius:8px;font-size:.82rem;font-weight:500;color:var(--text2);transition:.2s}
-        .sidebar-links a:hover,.sidebar-links a.active{color:var(--text);background:rgba(255,255,255,.05)}
-        .sidebar-links a.active{color:var(--accent);background:rgba(129,140,248,.08)}
-        .sidebar-links a .num{font-family:var(--mono);font-size:.65rem;color:var(--text3);width:18px}
-        .sidebar-bottom{border-top:1px solid var(--border);padding-top:1rem;display:flex;flex-direction:column;gap:.5rem}
-        .sidebar-bottom a{font-size:.82rem;font-weight:600;padding:.5rem .75rem;border-radius:8px;text-align:center;transition:.2s}
-        .btn-cv{background:var(--gradient2);color:#fff!important;}.btn-cv:hover{opacity:.9;color:#fff}
-        .btn-talk{border:1px solid var(--border2);color:var(--text2)!important}.btn-talk:hover{border-color:var(--accent);color:var(--accent)!important;background:rgba(129,140,248,.05)}
+/* NAV */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(253,252,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topnav-inner{max-width:760px;margin:0 auto;padding:.9rem 1.75rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.topnav .brand{font-family:var(--serif);font-weight:600;font-size:1.02rem;color:var(--ink)}
+.topnav .brand span{color:var(--maroon)}
+.navlinks{display:flex;gap:1.3rem;flex-wrap:wrap}
+.navlinks a{font-size:.82rem;font-weight:500;color:var(--body)}
+.navlinks a:hover{color:var(--maroon);text-decoration:none}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:.4rem .6rem;font-size:.85rem;color:var(--ink);cursor:pointer}
 
-        /* ===== MAIN ===== */
-        .main{margin-left:var(--nav-w);min-height:100vh}
+/* HEADER / HERO */
+header.profile{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.profile-row{display:flex;gap:2rem;align-items:flex-start}
+.profile-photo{width:132px;height:132px;border-radius:8px;overflow:hidden;flex-shrink:0;border:1px solid var(--line)}
+.profile-photo img{width:100%;height:100%;object-fit:cover}
+.profile-text h1{font-family:var(--serif);font-weight:700;font-size:1.9rem;color:var(--ink);margin-bottom:.15rem}
+.profile-role{font-size:.98rem;color:var(--maroon);font-weight:600;margin-bottom:.6rem}
+.profile-affil{font-size:.88rem;color:var(--muted);margin-bottom:1rem;line-height:1.6}
+.profile-links{display:flex;flex-wrap:wrap;gap:.4rem}
+.profile-links a{font-size:.78rem;font-weight:600;padding:.32rem .7rem;border:1px solid var(--line);border-radius:20px;color:var(--body)}
+.profile-links a:hover{border-color:var(--maroon);color:var(--maroon);text-decoration:none;background:#fff}
+.status-line{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:#2f7a4f;font-weight:600;margin-top:.9rem}
+.status-line::before{content:'';width:6px;height:6px;border-radius:50%;background:#2f7a4f}
 
-        /* ===== HERO ===== */
-        .hero{min-height:100vh;display:flex;align-items:center;padding:4rem 3rem;position:relative;overflow:hidden}
-        .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(129,140,248,.08) 0%,transparent 70%);pointer-events:none}
-        .hero::after{content:'';position:absolute;bottom:-150px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(192,132,252,.06) 0%,transparent 70%);pointer-events:none}
-        .hero-inner{display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:center;max-width:1000px;position:relative;z-index:1}
-        .hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);color:var(--green);padding:.3rem .8rem;border-radius:20px;font-size:.72rem;font-weight:600;margin-bottom:1.5rem}
-        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-        .hero-intro{font-size:1rem;color:var(--text2);font-weight:400;margin-bottom:.5rem}
-        .hero h1{font-family:var(--serif);font-size:3.2rem;line-height:1.1;color:#fff;font-weight:400;margin-bottom:1.25rem}
-        .hero h1 em{font-style:italic;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero-desc{color:var(--text2);font-size:.92rem;line-height:1.8;max-width:480px;margin-bottom:2rem}
-        .hero-cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
-        .hero-cta a{padding:.6rem 1.2rem;border-radius:8px;font-size:.82rem;font-weight:600;transition:.25s}
-        .cta-primary{background:var(--gradient2);color:#fff!important}.cta-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:var(--glow);color:#fff}
-        .cta-secondary{border:1px solid var(--border2);color:var(--text2)!important}.cta-secondary:hover{border-color:var(--accent);color:var(--accent)!important}
-        .cta-ghost{color:var(--text3)!important}.cta-ghost:hover{color:var(--accent)!important}
-        .hero-tags{display:flex;flex-wrap:wrap;gap:.35rem}
-        .hero-tags span{font-size:.68rem;font-weight:600;padding:.2rem .55rem;border-radius:4px;background:rgba(255,255,255,.04);color:var(--text3);border:1px solid var(--border)}
-        .hero-photo{position:relative}
-        .hero-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border2)}
-        .hero-photo::after{content:'';position:absolute;inset:12px -12px -12px 12px;border:2px solid var(--accent);border-radius:16px;z-index:-1;opacity:.15}
-        .hero-status{position:absolute;bottom:16px;left:16px;background:rgba(10,10,15,.85);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:10px;padding:.5rem .75rem;display:flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:600;color:var(--green)}
-        .hero-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green)}
+/* SECTIONS */
+section{padding:2.6rem 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+.s-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.3rem;gap:1rem;flex-wrap:wrap}
+.s-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--ink)}
+.s-num{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.s-intro{font-size:.9rem;color:var(--muted);margin:-.7rem 0 1.4rem;max-width:600px}
 
-        /* ===== SECTIONS ===== */
-        .section{padding:5rem 3rem;border-top:1px solid var(--border);position:relative}
-        .section-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.5rem}
-        .section-title{font-family:var(--serif);font-size:2.2rem;color:#fff;font-weight:400;margin-bottom:.5rem}
-        .section-sub{color:var(--text3);font-size:.88rem;max-width:560px;margin-bottom:2.5rem}
+/* ABOUT */
+.about p{font-size:.94rem;margin-bottom:.9rem}
+.about strong{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;margin-top:1.6rem}
+.stat{text-align:center;padding:.9rem .5rem;background:var(--paper2);border-radius:8px}
+.stat b{display:block;font-family:var(--serif);font-size:1.4rem;color:var(--maroon)}
+.stat span{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 
-        /* ===== ABOUT ===== */
-        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:900px}
-        .about-text{font-size:.92rem;color:var(--text2);line-height:1.85}
-        .about-text p+p{margin-top:1rem}
-        .about-text strong{color:var(--text)}
-        .about-highlight{font-style:italic;color:var(--accent);font-size:.88rem;margin-top:1.5rem;padding-left:1rem;border-left:2px solid var(--accent)}
+/* EXPERIENCE / PROJECTS shared "entry" pattern */
+.entry{padding:1.1rem 0;border-top:1px solid var(--line)}
+.entry:first-child{border-top:none;padding-top:0}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:.15rem}
+.entry-role{font-weight:700;font-size:.98rem;color:var(--ink)}
+.entry-date{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.entry-org{font-size:.86rem;color:var(--maroon);font-weight:600;margin-bottom:.5rem}
+.entry-org a{color:var(--maroon)}
+.entry p.desc{font-size:.87rem;color:var(--body);margin-bottom:.5rem}
+.entry ul{list-style:none;margin-bottom:.5rem}
+.entry ul li{font-size:.86rem;color:var(--body);padding-left:1rem;position:relative;margin-bottom:.25rem}
+.entry ul li::before{content:'–';position:absolute;left:0;color:var(--muted)}
+.badge{display:inline-block;font-size:.65rem;font-weight:700;padding:.15rem .5rem;border-radius:4px;text-transform:uppercase;letter-spacing:.04em;margin-left:.4rem;vertical-align:middle}
+.badge.current{background:#e8f3ec;color:#2f7a4f}
+.badge.past{background:var(--tag-bg);color:var(--muted)}
+.badge.dod{background:#eaf1ea;color:#3d6b4a}
+.badge.nsf{background:#e9eef6;color:#31547f}
+.badge.kr{background:#f6ecee;color:#8a3348}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem}
+.tags span{font-size:.68rem;font-weight:500;padding:.18rem .55rem;border-radius:4px;background:var(--tag-bg);color:var(--body)}
 
-        /* ===== ANIMATED STATS ===== */
-        .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
-        .stat-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;transition:.3s}
-        .stat-box:hover{border-color:rgba(129,140,248,.2);box-shadow:var(--glow)}
-        .stat-num{font-family:var(--serif);font-size:2.2rem;color:#fff;line-height:1}
-        .stat-num .suffix{font-size:1.2rem;color:var(--accent)}
-        .stat-label{font-size:.7rem;color:var(--text3);font-weight:500;margin-top:.3rem;text-transform:uppercase;letter-spacing:.05em}
+/* RESEARCH INTERESTS - simple list not glossy cards */
+.interests{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem}
+.interest h4{font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.interest p{font-size:.84rem;color:var(--muted);line-height:1.6}
 
-        /* ===== EXPERIENCE TIMELINE ===== */
-        .exp-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
-        .exp-tab{padding:.4rem 1rem;border-radius:8px;font-size:.78rem;font-weight:600;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:.2s}
-        .exp-tab.active,.exp-tab:hover{color:var(--accent);border-color:rgba(129,140,248,.3);background:rgba(129,140,248,.06)}
-        .exp-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.25rem;transition:.3s;position:relative;overflow:hidden}
-        .exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient);opacity:0;transition:.3s}
-        .exp-card:hover::before{opacity:1}
-        .exp-card:hover{border-color:rgba(129,140,248,.15);box-shadow:0 8px 32px rgba(0,0,0,.3)}
-        .exp-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:.75rem;flex-wrap:wrap;gap:.5rem}
-        .exp-role{font-size:1.15rem;font-weight:700;color:#fff}
-        .exp-badge{font-size:.68rem;font-weight:700;padding:.2rem .6rem;border-radius:6px;background:rgba(129,140,248,.1);color:var(--accent);border:1px solid rgba(129,140,248,.2)}
-        .exp-company{font-size:.88rem;color:var(--accent);font-weight:600}
-        .exp-company a{color:var(--accent)}.exp-company a:hover{color:#c084fc}
-        .exp-date{font-family:var(--mono);font-size:.72rem;color:var(--text3);margin:.25rem 0 .75rem}
-        .exp-stats{display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
-        .exp-stat{text-align:center;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:8px;padding:.6rem .8rem;min-width:80px}
-        .exp-stat b{display:block;font-size:1rem;color:var(--accent);font-family:var(--mono)}
-        .exp-stat small{font-size:.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em}
-        .exp-desc{color:var(--text2);font-size:.88rem;line-height:1.75;margin-bottom:1rem}
-        .exp-bullets{list-style:none;margin-bottom:1rem}
-        .exp-bullets li{padding:.3rem 0;padding-left:1.2rem;position:relative;font-size:.85rem;color:var(--text2);line-height:1.6}
-        .exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-weight:700}
-        .exp-tags{display:flex;flex-wrap:wrap;gap:.3rem}
-        .exp-tags span{font-size:.65rem;font-weight:600;padding:.2rem .5rem;border-radius:4px;background:rgba(129,140,248,.06);color:var(--accent);border:1px solid rgba(129,140,248,.1)}
+/* PUBLICATIONS */
+.pub{padding:.85rem 0;border-top:1px solid var(--line);font-size:.89rem}
+.pub:first-child{border-top:none;padding-top:0}
+.pub-title{color:var(--ink);font-weight:600}
+.pub-meta{font-size:.78rem;color:var(--muted);margin-top:.2rem}
+.pub-meta .if{font-family:var(--mono);color:var(--maroon)}
 
-        /* ===== RESEARCH ===== */
-        .research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-        .r-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;text-align:center;transition:.3s;cursor:default}
-        .r-card:hover{border-color:rgba(129,140,248,.2);transform:translateY(-4px);box-shadow:var(--glow)}
-        .r-card .icon{font-size:2rem;margin-bottom:.75rem;filter:grayscale(0)}
-        .r-card h4{font-size:.92rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
-        .r-card p{font-size:.78rem;color:var(--text3);line-height:1.55}
-        .scholar-btn{display:inline-flex;align-items:center;gap:.4rem;margin-top:2rem;padding:.7rem 1.4rem;background:var(--gradient2);color:#fff;border-radius:8px;font-weight:600;font-size:.85rem;transition:.25s}
-        .scholar-btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:var(--glow);color:#fff}
+/* AWARDS */
+.award{padding:.85rem 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.award:first-child{border-top:none;padding-top:0}
+.award-name{font-size:.92rem;font-weight:700;color:var(--ink)}
+.award-desc{font-size:.83rem;color:var(--muted);margin-top:.2rem;max-width:520px}
+.award-date{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
 
-        /* ===== PUBLICATIONS ===== */
-        .pub-list{display:flex;flex-direction:column;gap:.75rem;max-width:800px}
-        .pub-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:1.25rem 1.5rem;transition:.25s}
-        .pub-card:hover{border-color:rgba(129,140,248,.2);transform:translateX(4px);box-shadow:0 4px 20px rgba(0,0,0,.25)}
-        .pub-card h3{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.3rem;line-height:1.4}
-        .pub-card .meta{font-size:.78rem;color:var(--accent);font-weight:600}
-        .pub-card .if-badge{font-family:var(--mono);font-size:.65rem;background:var(--accent3);color:#fff;padding:2px 7px;border-radius:6px;margin-left:5px}
+/* MENTORSHIP */
+.mentor-list{display:flex;flex-direction:column}
+.mentor{display:grid;grid-template-columns:60px 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid var(--line)}
+.mentor:first-child{border-top:none;padding-top:0}
+.mentor-yr{font-family:var(--serif);font-size:1.3rem;color:var(--maroon);font-weight:700}
+.mentor-name{font-size:.92rem;font-weight:700;color:var(--ink)}
+.mentor-sub{font-size:.78rem;color:var(--muted);margin-bottom:.3rem}
+.mentor-out{font-size:.85rem;color:var(--body)}
 
-        /* ===== AWARDS ===== */
-        .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-        .aw-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:.3s;position:relative;overflow:hidden}
-        .aw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient)}
-        .aw-card:hover{border-color:rgba(129,140,248,.15);transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
-        .aw-icon{font-size:1.5rem;margin-bottom:.6rem}
-        .aw-meta{font-size:.68rem;color:var(--text3);font-weight:500;margin-bottom:.4rem}
-        .aw-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.4rem}
-        .aw-card p{font-size:.82rem;color:var(--text2);line-height:1.6}
+/* GALLERY - simple grid, no hover zoom gloss */
+.gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.gal-item img{width:100%;height:160px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+.gal-item h5{font-size:.82rem;font-weight:700;color:var(--ink);margin:.5rem 0 .2rem}
+.gal-item p{font-size:.78rem;color:var(--muted);line-height:1.55}
 
-        /* ===== GALLERY ===== */
-        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
-        .g-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.3s}
-        .g-card:hover{border-color:rgba(129,140,248,.15);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
-        .g-card-img{overflow:hidden}.g-card-img img{width:100%;height:220px;object-fit:cover;transition:transform .5s}.g-card:hover .g-card-img img{transform:scale(1.04)}
-        .g-card-body{padding:1.25rem 1.5rem}
-        .g-card-body h4{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.3rem}
-        .g-card-body p{font-size:.8rem;color:var(--text2);line-height:1.6}
+/* CONTACT */
+.contact-grid{display:flex;flex-wrap:wrap;gap:2rem;font-size:.9rem}
+.contact-grid div b{display:block;color:var(--ink);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.2rem;color:var(--muted)}
 
-        /* ===== CONTACT ===== */
-        .contact-section{background:linear-gradient(135deg,rgba(129,140,248,.04) 0%,rgba(192,132,252,.04) 100%)}
-        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:700px;margin-bottom:2rem}
-        .c-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;transition:.3s}
-        .c-card:hover{border-color:rgba(129,140,248,.2);transform:translateY(-3px)}
-        .c-card .icon{font-size:1.3rem;margin-bottom:.5rem}
-        .c-card h3{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.2rem}
-        .c-card p{font-size:.82rem;color:var(--text2);word-break:break-word}
-        .social-row{display:flex;gap:.6rem;flex-wrap:wrap}
-        .social-row a{padding:.55rem 1.1rem;border-radius:8px;font-size:.82rem;font-weight:600;border:1px solid var(--border);color:var(--text2);transition:.2s}
-        .social-row a:hover{border-color:var(--accent);color:var(--accent);background:rgba(129,140,248,.05)}
+footer{padding:2rem 0 3rem;font-size:.78rem;color:var(--muted);text-align:center}
 
-        /* ===== FOOTER ===== */
-        .footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-        .footer-left{font-size:.78rem;color:var(--text3)}
-        .footer-right{display:flex;gap:1.5rem}
-        .footer-right a{font-size:.78rem;color:var(--text3);font-weight:500}.footer-right a:hover{color:var(--accent)}
-        .footer-visit{font-size:.72rem;color:var(--text3);display:flex;align-items:center;gap:6px}
-
-        /* ===== FADE ANIM ===== */
-        .fade{opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s}.fade.show{opacity:1;transform:translateY(0)}
-
-        /* ===== MOBILE NAV ===== */
-        .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;height:56px;background:rgba(10,10,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:200;align-items:center;padding:0 1.25rem;justify-content:space-between}
-        .mobile-nav .nav-logo{font-weight:700;font-size:.95rem;color:var(--text)}
-        .hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:4px}
-        .hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
-        .mobile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:150}
-        .mobile-overlay.open{display:block}
-
-        /* ===== RESPONSIVE ===== */
-        @media(max-width:900px){
-            .sidebar{transform:translateX(-100%);transition:transform .3s;z-index:300}
-            .sidebar.open{transform:translateX(0)}
-            .main{margin-left:0}
-            .mobile-nav{display:flex}
-            .hero{padding:5rem 1.5rem 3rem;min-height:auto}
-            .hero-inner{grid-template-columns:1fr;text-align:center;gap:2rem}
-            .hero-photo{max-width:250px;margin:0 auto;order:-1}
-            .hero-cta,.hero-tags{justify-content:center}
-            .hero-desc{margin:0 auto 2rem}
-            .section{padding:3rem 1.5rem}
-            .stats-row{grid-template-columns:repeat(2,1fr)}
-            .about-grid{grid-template-columns:1fr}
-            .gallery-grid,.awards-grid{grid-template-columns:1fr}
-            .footer{padding:2rem 1.5rem}
-            .hero h1{font-size:2.4rem}
-            .section-title{font-size:1.8rem}
-            .exp-stats{gap:.5rem}
-        }
-        @media(max-width:500px){
-            .stats-row{grid-template-columns:1fr 1fr}
-            .hero h1{font-size:2rem}
-            .exp-stats{flex-direction:column;align-items:stretch}
-        }
-    </style>
+@media(max-width:640px){
+  .navlinks{display:none}
+  .nav-toggle{display:inline-block}
+  .navlinks.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.75rem;gap:.8rem}
+  .profile-row{flex-direction:column;align-items:flex-start}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .interests{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-<!-- MOBILE NAV -->
-<div class="mobile-nav">
-    <div class="nav-logo">Sharjeel Anjum</div>
-    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">Sharjeel Anjum <span>·</span> AI Researcher</div>
+    <button class="nav-toggle" id="navToggle">Menu</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="profile" id="top">
+    <div class="profile-row">
+      <div class="profile-photo"><img src="sahrjeel.jpg" alt="Sharjeel Anjum"></div>
+      <div class="profile-text">
+        <h1>Sharjeel Anjum</h1>
+        <div class="profile-role">AI Researcher · PhD Student</div>
+        <div class="profile-affil">Graduate Hagler Fellow, Hagler Institute for Advanced Study<br>Texas A&M University, College Station, TX</div>
+        <div class="profile-links">
+          <a href="mailto:malikanjum833@gmail.com">Email</a>
+          <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/sharjeelanjum/" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/sharjeel_anjum1" target="_blank">Twitter / X</a>
+        </div>
+        <div class="status-line">Open to research collaborations</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="s-head"><h2 class="s-title">About</h2><span class="s-num">01</span></div>
+    <div class="about">
+      <p>I'm a <strong>third-year PhD student</strong> at Texas A&M University, currently conducting research as a <strong>Graduate Hagler Fellow</strong>. My work focuses on machine learning for physiological data, with an emphasis on personalized fatigue monitoring in safety-critical settings — research supported by both the <strong>U.S. Department of Defense</strong> and the <strong>National Science Foundation</strong>.</p>
+      <p>Before the fellowship, I built adversarial ML algorithms at the <strong>SIIR Lab</strong>, developed anomaly detection systems at <strong>IvWorks</strong> (South Korea), and designed worker safety monitoring systems at <strong>Chung-Ang University</strong>. My broader interests sit at the intersection of adversarial machine learning, real-world automation, and worker safety.</p>
+      <p>Alongside research, I mentor undergraduate students through their first conference publications and lead deep learning workshops as a Senior Data Science Ambassador at TAMIDS.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5+</b><span>Years Exp.</span></div>
+      <div class="stat"><b>17+</b><span>Publications</span></div>
+      <div class="stat"><b>2</b><span>Federal Grants</span></div>
+      <div class="stat"><b>3</b><span>Mentees</span></div>
+      <div class="stat"><b>1</b><span>Patent</span></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="s-head"><h2 class="s-title">Experience</h2><span class="s-num">02</span></div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Graduate Hagler Fellow<span class="badge current">Current</span></div><div class="entry-date">Jan 2026 – Present</div></div>
+      <div class="entry-org"><a href="https://www.tamu.edu/" target="_blank">Hagler Institute for Advanced Study, Texas A&M University</a></div>
+      <p class="desc">Researching machine learning for physiological data to enable personalized fatigue monitoring in safety-critical and occupational settings, funded by the Department of Defense and National Science Foundation.</p>
+      <div class="tags"><span>Machine Learning</span><span>Physiological Data</span><span>Fatigue Monitoring</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Senior Data Science Ambassador<span class="badge current">Current</span></div><div class="entry-date">2026 – 2027</div></div>
+      <div class="entry-org"><a href="https://tamids.tamu.edu/" target="_blank">Texas A&M Institute of Data Science (TAMIDS)</a></div>
+      <p class="desc">Promoted from Data Science Ambassador to lead deep learning workshops and mentor participants in dataset preparation, model development, and applied problem-solving.</p>
+      <div class="tags"><span>Workshops</span><span>Mentoring</span><span>Neural Networks</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Data Science Ambassador<span class="badge past">Past</span></div><div class="entry-date">Aug 2025 – 2026</div></div>
+      <div class="entry-org"><a href="https://tamids.tamu.edu/" target="_blank">Texas A&M Institute of Data Science (TAMIDS)</a></div>
+      <p class="desc">Delivered deep learning workshops on neural network techniques and mentored participants in dataset preparation and model development.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Research Assistant (Applied AI)</div><div class="entry-date">Jan 2024 – Dec 2025</div></div>
+      <div class="entry-org">SIIR Lab, Texas A&M University</div>
+      <ul>
+        <li>Developed robust and adversarial ML algorithms in PyTorch for safety-critical applications.</li>
+        <li>Led ML model development for physiological sensor data and built supporting Android applications.</li>
+        <li>Contributed to an NSF-funded VR data-sensing project for K–12 students using Unity (C#).</li>
+      </ul>
+      <div class="tags"><span>PyTorch</span><span>Adversarial ML</span><span>Android</span><span>Unity</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">AI Researcher</div><div class="entry-date">Industry</div></div>
+      <div class="entry-org">IvWorks Company, South Korea</div>
+      <p class="desc">Developed ML solutions for identifying anomalies in semiconductor manufacturing using time series analysis and computer vision.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Research Assistant</div><div class="entry-date">Graduate Research</div></div>
+      <div class="entry-org">CONTIL, Chung-Ang University</div>
+      <p class="desc">Designed and deployed ML/DL models for construction worker safety monitoring using embedded computer vision systems.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Computer Science Instructor</div><div class="entry-date">Teaching</div></div>
+      <div class="entry-org">Kainat School System</div>
+      <p class="desc">Taught computer science curriculum and lab courses to middle school students.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="s-head"><h2 class="s-title">Research Projects</h2><span class="s-num">03</span></div>
+    <p class="s-intro">Federally funded and international projects spanning fatigue monitoring, embodied interaction, and industrial safety.</p>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Fatigue Monitoring Algorithms for Health & Safety<span class="badge dod">DoD</span></div><div class="entry-date">Grant W81XWH2010030</div></div>
+      <div class="entry-org">U.S. Department of Defense · Graduate Researcher</div>
+      <p class="desc">Developed machine learning algorithms for personalized fatigue monitoring from physiological sensor data, aimed at improving health and safety outcomes in demanding operational environments.</p>
+      <div class="tags"><span>Physiological Data</span><span>Fatigue Detection</span><span>Health & Safety</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">VR Data Sensing & Embodied Interaction for Site Inspection<span class="badge nsf">NSF</span></div><div class="entry-date">SIIR Lab</div></div>
+      <div class="entry-org">National Science Foundation · Texas A&M University</div>
+      <p class="desc">Built a Unity (C#) VR data-sensing experience introducing K–12 students to data sensing technologies, and contributed to a companion research thread on embodied interaction for construction site inspection using drones — presented at the CSCE Conference in Niagara Falls, Canada.</p>
+      <div class="tags"><span>Unity / C#</span><span>VR</span><span>K-12 Outreach</span><span>Drones</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Semiconductor Manufacturing Anomaly Detection<span class="badge kr">Korea</span></div><div class="entry-date">Industry</div></div>
+      <div class="entry-org">IvWorks Company, South Korea</div>
+      <p class="desc">Combined time series analysis and computer vision to detect anomalies in semiconductor manufacturing, catching defects earlier in production.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><div class="entry-role">Embedded Vision for Construction Worker Safety<span class="badge kr">Korea</span></div><div class="entry-date">Graduate Research</div></div>
+      <div class="entry-org">CONTIL, Chung-Ang University</div>
+      <p class="desc">Deployed embedded computer vision and deep learning models for fall prevention on ladders and scaffolds, later published in IEEE Access and the Journal of Construction Engineering and Management.</p>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="s-head"><h2 class="s-title">Research Interests</h2><span class="s-num">04</span></div>
+    <div class="interests">
+      <div class="interest"><h4>Adversarial Machine Learning</h4><p>Building robust models that withstand adversarial attacks in safety-critical deployments.</p></div>
+      <div class="interest"><h4>Real-World Automation</h4><p>Translating ML research into deployed systems for industrial and construction contexts.</p></div>
+      <div class="interest"><h4>Worker Safety Monitoring</h4><p>Computer vision and IoT-based systems for fall prevention and hazard detection.</p></div>
+      <div class="interest"><h4>Fatigue Detection Systems</h4><p>Personalized physiological monitoring to detect and predict muscle and cognitive fatigue.</p></div>
+    </div>
+    <p style="margin-top:1.4rem"><a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">View full Google Scholar profile →</a></p>
+  </section>
+
+  <section id="publications">
+    <div class="s-head"><h2 class="s-title">Selected Publications</h2><span class="s-num">05</span></div>
+    <div class="pub"><div class="pub-title">IoT-based Safety Hook Monitoring for Fall Prevention</div><div class="pub-meta">Automation in Construction · <span class="if">IF 11.45</span></div></div>
+    <div class="pub"><div class="pub-title">Deep Learning Mitosis Recognition for Uterine Leiomyosarcoma</div><div class="pub-meta">Cancer · <span class="if">IF 7.6</span></div></div>
+    <div class="pub"><div class="pub-title">Fall Prevention From Ladders Using Deep Learning-Based Height Assessment</div><div class="pub-meta">IEEE Access · <span class="if">IF 4.34</span></div></div>
+    <div class="pub"><div class="pub-title">Rotation Error Detection of GaN Substrate in MBE using Ensemble Learning</div><div class="pub-meta">ACS Publisher · <span class="if">IF 4.1</span></div></div>
+    <div class="pub"><div class="pub-title">Scaffold Fall Prevention Using Vision & IoT</div><div class="pub-meta">Journal of Construction Engineering and Management · <span class="if">IF 3.9</span></div></div>
+  </section>
+
+  <section id="awards">
+    <div class="s-head"><h2 class="s-title">Awards & Honors</h2><span class="s-num">06</span></div>
+    <div class="award"><div><div class="award-name">Graduate Hagler Fellow</div><div class="award-desc">Competitive fellowship supporting research on ML for physiological data and personalized fatigue monitoring.</div></div><div class="award-date">Texas A&M · 2026</div></div>
+    <div class="award"><div><div class="award-name">Senior Data Science Ambassador</div><div class="award-desc">Promoted to lead deep learning workshops and mentor participants at TAMIDS.</div></div><div class="award-date">2026 – 2027</div></div>
+    <div class="award"><div><div class="award-name">PhD Excellence Research Student</div><div class="award-desc">Recognized at the department level for excellence in PhD research.</div></div><div class="award-date">Texas A&M · 2026</div></div>
+    <div class="award"><div><div class="award-name">Data Science Ambassador Scholarship</div><div class="award-desc">For conducting deep learning workshops and guiding participants in dataset preparation and problem-solving.</div></div><div class="award-date">TAMIDS · 2025 – 2026</div></div>
+    <div class="award"><div><div class="award-name">Patent Recognition</div><div class="award-desc">Patent filed at Texas A&M Innovation for work at the intersection of AI and intelligent systems.</div></div><div class="award-date">Texas A&M</div></div>
+    <div class="award"><div><div class="award-name">Young Scientist Scholarship</div><div class="award-desc">Covered tuition and research support for the Master's program.</div></div><div class="award-date">Chung-Ang · 2020 – 2022</div></div>
+    <div class="award"><div><div class="award-name">Department-Level Scholarship</div><div class="award-desc">Merit scholarship awarded during Master's studies.</div></div><div class="award-date">Chung-Ang · 2021</div></div>
+  </section>
+
+  <section id="mentorship">
+    <div class="s-head"><h2 class="s-title">Student Mentorship</h2><span class="s-num">07</span></div>
+    <p class="s-intro">Undergraduate researchers mentored through their first conference publications, as part of NSF/TAMIDS-affiliated research programs.</p>
+    <div class="mentor-list">
+      <div class="mentor">
+        <div class="mentor-yr">2024</div>
+        <div>
+          <div class="mentor-name">Kyra Martindale</div>
+          <div class="mentor-sub">Mentored by Sharjeel Anjum (PhD Student)</div>
+          <div class="mentor-out">Co-authored and presented a conference paper resulting from mentored research.</div>
+        </div>
+      </div>
+      <div class="mentor">
+        <div class="mentor-yr">2025</div>
+        <div>
+          <div class="mentor-name">Arnia Goode</div>
+          <div class="mentor-sub">Mentored by Sharjeel Anjum (PhD Student)</div>
+          <div class="mentor-out">Co-authored a conference paper and received the Best Undergraduate Poster Award at CRC 2026.</div>
+        </div>
+      </div>
+      <div class="mentor">
+        <div class="mentor-yr">2026</div>
+        <div>
+          <div class="mentor-name">Monica Chaidez</div>
+          <div class="mentor-sub">Mentored by Sharjeel Anjum (PhD Student)</div>
+          <div class="mentor-out">Current mentee — research in progress.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="s-head"><h2 class="s-title">Gallery</h2><span class="s-num">08</span></div>
+    <div class="gal-grid">
+      <div class="gal-item"><img src="niagratalk.jpeg" alt="Research Presentation"><h5>Research Presentation</h5><p>Talk on embodied interaction, funded by NSF, at the CSCE Conference in Niagara Falls, Canada — on leveraging embodied interaction for construction site inspection using drones.</p></div>
+      <div class="gal-item"><img src="poster.jpeg" alt="Mentoring"><h5>Mentoring</h5><p>A mentee, supported under the NSF REU program, presented a poster on deploying an ML model on an edge device for physical fatigue monitoring.</p></div>
+      <div class="gal-item"><img src="nsf school demo.jpeg" alt="K-12 Outreach"><h5>K–12 Outreach</h5><p>A four-day session introducing students at Caldwell High School, Texas, to data sensing technologies in VR.</p></div>
+      <div class="gal-item"><img src="1637836438064.jpg" alt="AI Summit"><h5>AI Summit</h5><p>Attended the Global AI Summit at KINTEX, South Korea.</p></div>
+      <div class="gal-item"><img src="summerschool.jpg" alt="ECCC"><h5>ECCC Summer School</h5><p>Attended the European Council on Computing in Construction in 2021 to explore AI applications in construction.</p></div>
+      <div class="gal-item"><img src="generated-image (2).png" alt="Campus Life"><h5>Campus Life</h5><p>Moments from life and research at Texas A&M University.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="s-head"><h2 class="s-title">Contact</h2><span class="s-num">09</span></div>
+    <div class="contact-grid">
+      <div><b>Email</b>malikanjum833@gmail.com</div>
+      <div><b>Location</b>College Station, Texas</div>
+      <div><b>Elsewhere</b><a href="https://www.linkedin.com/in/sharjeelanjum/" target="_blank">LinkedIn</a> · <a href="https://twitter.com/sharjeel_anjum1" target="_blank">Twitter/X</a> · <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Scholar</a></div>
+    </div>
+  </section>
+
+  <footer>© 2026 Sharjeel Anjum · College Station, Texas</footer>
 </div>
-<div class="mobile-overlay" id="overlay"></div>
-
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-        <div class="sidebar-avatar"><img src="sahrjeel.jpg" alt="SA"></div>
-        <div><div class="sidebar-name">Sharjeel Anjum</div><div class="sidebar-role">AI Researcher · PhD Student</div></div>
-    </div>
-    <nav class="sidebar-links">
-        <a href="#home" class="active"><span class="num">01</span> Home</a>
-        <a href="#about"><span class="num">02</span> About</a>
-        <a href="#experience"><span class="num">03</span> Experience</a>
-        <a href="#research"><span class="num">04</span> Research</a>
-        <a href="#publications"><span class="num">05</span> Publications</a>
-        <a href="#awards"><span class="num">06</span> Awards</a>
-        <a href="#gallery"><span class="num">07</span> Gallery</a>
-        <a href="#contact"><span class="num">08</span> Contact</a>
-    </nav>
-    <div class="sidebar-bottom">
-        <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank" class="btn-cv">Google Scholar</a>
-        <a href="#contact" class="btn-talk">Let's Talk →</a>
-    </div>
-</aside>
-
-<!-- MAIN CONTENT -->
-<main class="main">
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-inner">
-            <div>
-                <div class="hero-badge">Open to Research Collaborations</div>
-                <p class="hero-intro">Hey, I'm Sharjeel 👋</p>
-                <h1>I turn <em>complex data</em> into intelligent safety systems.</h1>
-                <p class="hero-desc">AI Researcher & Machine Learning Engineer with 5+ years building adversarial ML models, physiological monitoring systems, and safety-critical applications at Texas A&M University.</p>
-                <div class="hero-cta">
-                    <a href="#publications" class="cta-primary">See My Work ↓</a>
-                    <a href="#experience" class="cta-secondary">Work History</a>
-                    <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank" class="cta-ghost">↓ Scholar</a>
-                </div>
-                <div class="hero-tags">
-                    <span>PyTorch</span><span>Adversarial ML</span><span>Computer Vision</span><span>IoT</span><span>Deep Learning</span><span>Time Series</span><span>Safety Systems</span><span>VR/Unity</span>
-                </div>
-            </div>
-            <div class="hero-photo">
-                <img src="sahrjeel.jpg" alt="Muhammad Sharjeel Anjum">
-                <div class="hero-status">Available Now</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-        <div class="section-label">About Me</div>
-        <h2 class="section-title">The Researcher Behind the Models</h2>
-        <p class="section-sub">Not just algorithms — I build the AI systems that keep people safe.</p>
-        <div class="about-grid">
-            <div class="about-text fade">
-                <p>I'm Sharjeel, a <strong>third-year PhD student</strong> at Texas A&M University, currently conducting research as a <strong>Graduate Hagler Fellow</strong>. My work focuses on machine learning for physiological data, with emphasis on personalized fatigue monitoring in safety-critical settings.</p>
-                <p>Before the fellowship, I built adversarial ML algorithms at the <strong>SIIR Lab</strong>, developed anomaly detection systems at <strong>IvWorks</strong> (South Korea), and designed worker safety monitoring at <strong>Chung-Ang University</strong>.</p>
-                <div class="about-highlight">I believe AI should simplify safety, not complicate it. Whether it's a fall prevention system or a fatigue detection model, if it doesn't protect someone, it's just computation.</div>
-            </div>
-            <div class="about-text fade">
-                <p>My expertise spans <strong>adversarial machine learning</strong>, real-world automation, worker safety, and health monitoring with a focus on fatigue and muscle fatigue.</p>
-                <p>I strive to leverage AI to solve complex problems and enhance safety across various domains by bridging the gap between cutting-edge research and practical implementation.</p>
-            </div>
-        </div>
-        <div class="stats-row">
-            <div class="stat-box fade"><div class="stat-num">5<span class="suffix">+</span></div><div class="stat-label">Years Experience</div></div>
-            <div class="stat-box fade"><div class="stat-num">17<span class="suffix">+</span></div><div class="stat-label">Publications</div></div>
-            <div class="stat-box fade"><div class="stat-num">5<span class="suffix">+</span></div><div class="stat-label">Journal Reviewer</div></div>
-            <div class="stat-box fade"><div class="stat-num">1<span class="suffix"></span></div><div class="stat-label">Patent Filed</div></div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-        <div class="section-label">Career</div>
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-sub">5+ years across academia, industry, and teaching.</p>
-
-        <div class="exp-tabs">
-            <span class="exp-tab active">All</span>
-            <span class="exp-tab">Research</span>
-            <span class="exp-tab">Industry</span>
-            <span class="exp-tab">Teaching</span>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">Graduate Hagler Fellow</div><div class="exp-badge">Current Role</div></div>
-            <div class="exp-company"><a href="https://www.tamu.edu/" target="_blank">Hagler Institute for Advanced Study, Texas A&M University</a></div>
-            <div class="exp-date">Jan 2026 – Present · College Station, TX</div>
-            <div class="exp-desc">Conducting research on machine learning for physiological data to enable personalized fatigue monitoring in safety-critical and occupational settings.</div>
-            <div class="exp-tags"><span>Machine Learning</span><span>Physiological Data</span><span>Fatigue Monitoring</span><span>Safety-Critical AI</span></div>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">Data Science Ambassador</div></div>
-            <div class="exp-company"><a href="https://tamids.tamu.edu/" target="_blank">Texas A&M Institute of Data Science (TAMIDS)</a></div>
-            <div class="exp-date">Aug 2025 – Present · Texas, USA</div>
-            <div class="exp-desc">Delivering deep learning workshops on neural network techniques and mentoring participants in dataset preparation, model development, and problem-solving for AI and data science projects.</div>
-            <div class="exp-tags"><span>Deep Learning Workshops</span><span>Mentoring</span><span>Neural Networks</span></div>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">Research Assistant (Applied AI)</div></div>
-            <div class="exp-company"><a href="https://www.tamu.edu/" target="_blank">SIIR Lab, Texas A&M University</a></div>
-            <div class="exp-date">Jan 2024 – Dec 2025 · Texas, USA</div>
-            <ul class="exp-bullets">
-                <li>Developed robust and adversarial ML algorithms in PyTorch for safety‑critical applications.</li>
-                <li>Led ML model development for physiological sensor data and built supporting Android applications.</li>
-                <li>Contributed to an NSF‑funded VR data‑sensing project for K–12 students using Unity (C#).</li>
-            </ul>
-            <div class="exp-tags"><span>PyTorch</span><span>Adversarial ML</span><span>Android</span><span>Unity</span><span>NSF</span></div>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">AI Researcher</div></div>
-            <div class="exp-company">IvWorks Company, South Korea</div>
-            <div class="exp-date">Industry Role</div>
-            <div class="exp-desc">Developed and implemented machine learning solutions for identifying anomalies in semiconductor manufacturing processes using time series analysis and computer vision techniques.</div>
-            <div class="exp-tags"><span>Time Series</span><span>Computer Vision</span><span>Anomaly Detection</span><span>Semiconductors</span></div>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">Research Assistant</div></div>
-            <div class="exp-company">CONTIL, Chung-Ang University</div>
-            <div class="exp-date">Graduate Research</div>
-            <div class="exp-desc">Designed and deployed ML/DL models for construction worker safety monitoring using embedded computer vision systems, contributing to safer work environments through innovative AI solutions.</div>
-            <div class="exp-tags"><span>Embedded CV</span><span>Worker Safety</span><span>ML/DL</span></div>
-        </div>
-
-        <div class="exp-card fade">
-            <div class="exp-header"><div class="exp-role">Computer Science Instructor</div></div>
-            <div class="exp-company">Kainat School System</div>
-            <div class="exp-date">Teaching Role</div>
-            <div class="exp-desc">Taught computer science curriculum and laboratory courses to middle school students, fostering interest in technology and computational thinking.</div>
-            <div class="exp-tags"><span>Teaching</span><span>Computer Science</span><span>K-12</span></div>
-        </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section class="section" id="research">
-        <div class="section-label">Expertise</div>
-        <h2 class="section-title">Research Interests</h2>
-        <p class="section-sub">My work sits at the intersection of AI, safety, and real-world deployment.</p>
-        <div class="research-grid">
-            <div class="r-card fade"><div class="icon">🤖</div><h4>Adversarial Machine Learning</h4><p>Building robust models that withstand adversarial attacks in safety-critical deployments.</p></div>
-            <div class="r-card fade"><div class="icon">⚙️</div><h4>Real-World Automation</h4><p>Translating ML research into deployed systems for industrial and construction contexts.</p></div>
-            <div class="r-card fade"><div class="icon">🛡️</div><h4>Worker Safety Monitoring</h4><p>Computer vision and IoT-based systems for fall prevention and hazard detection on job sites.</p></div>
-            <div class="r-card fade"><div class="icon">💪</div><h4>Fatigue Detection Systems</h4><p>Personalized physiological monitoring using ML to detect and predict muscle and cognitive fatigue.</p></div>
-        </div>
-        <div style="text-align:center;margin-top:2.5rem">
-            <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank" class="scholar-btn">View Google Scholar Profile →</a>
-        </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section class="section" id="publications">
-        <div class="section-label">Portfolio</div>
-        <h2 class="section-title">Selected Publications</h2>
-        <p class="section-sub">Key peer-reviewed contributions across AI, automation, and safety.</p>
-        <div class="pub-list">
-            <div class="pub-card fade"><h3>IoT-based Safety Hook Monitoring for Fall Prevention</h3><p class="meta">Automation in Construction <span class="if-badge">IF: 11.45</span></p></div>
-            <div class="pub-card fade"><h3>Deep Learning Mitosis Recognition for Uterine Leiomyosarcoma</h3><p class="meta">Cancer Journal <span class="if-badge">IF: 7.6</span></p></div>
-            <div class="pub-card fade"><h3>Fall Prevention From Ladders Using Deep Learning-Based Height Assessment</h3><p class="meta">IEEE Access <span class="if-badge">IF: 4.34</span></p></div>
-            <div class="pub-card fade"><h3>Rotation Error Detection of GaN Substrate in MBE using Ensemble Learning</h3><p class="meta">ACS Publisher <span class="if-badge">IF: 4.1</span></p></div>
-            <div class="pub-card fade"><h3>Scaffold Fall Prevention Using Vision &amp; IoT</h3><p class="meta">Journal of Construction Engineering and Management <span class="if-badge">IF: 3.9</span></p></div>
-        </div>
-    </section>
-
-    <!-- AWARDS -->
-    <section class="section" id="awards">
-        <div class="section-label">Recognition</div>
-        <h2 class="section-title">Awards & Honors</h2>
-        <p class="section-sub">Proof that the work speaks for itself.</p>
-        <div class="awards-grid">
-            <div class="aw-card fade"><div class="aw-icon">🏆</div><div class="aw-meta">Texas A&M · 2026</div><h3>Graduate Hagler Fellow</h3><p>Graduate Hagler Fellow supporting research on machine learning for physiological data and personalized fatigue monitoring, including a competitive stipend and institute support.</p></div>
-            <div class="aw-card fade"><div class="aw-icon">⭐</div><div class="aw-meta">TAMIDS · 2025</div><h3>Data Science Ambassador Scholarship</h3><p>Data Science Ambassador Scholarship for conducting deep learning workshops on neural network techniques and guiding participants in dataset preparation and problem-solving.</p></div>
-            <div class="aw-card fade"><div class="aw-icon">⚡</div><div class="aw-meta">Texas A&M Innovation</div><h3>Patent Recognition</h3><p>Patent filed at Texas A&M Innovation for work at the intersection of AI and intelligent systems.</p></div>
-            <div class="aw-card fade"><div class="aw-icon">🎓</div><div class="aw-meta">Chung-Ang · 2020–2022</div><h3>Young Scientist Scholarship</h3><p>Young Scientist Scholarship for the Master's program at Chung-Ang University covering tuition and research support.</p></div>
-            <div class="aw-card fade"><div class="aw-icon">📊</div><div class="aw-meta">Chung-Ang · 2021</div><h3>Department-Level Scholarship</h3><p>Department-level merit scholarship awarded during the Master's studies in 2021.</p></div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section" id="gallery">
-        <div class="section-label">Moments</div>
-        <h2 class="section-title">Gallery</h2>
-        <p class="section-sub">Conferences, collaborations & campus moments.</p>
-        <div class="gallery-grid">
-            <div class="g-card fade"><div class="g-card-img"><img src="niagratalk.jpeg" alt="Research Presentation"></div><div class="g-card-body"><h4>Research Presentation</h4><p>Gave a talk on embodied interaction, funded by the National Science Foundation, at the recent CSCE Conference held in Niagara Falls, Canada 🇨🇦. Specifically, the presentation addressed the following question: How can embodied interaction be leveraged for construction site inspection? This question was addressed by developing a conceptual framework and validating it through experiments using drones with embodied interaction for site inspection.</p></div></div>
-            <div class="g-card fade"><div class="g-card-img"><img src="poster.jpeg" alt="Mentoring"></div><div class="g-card-body"><h4>Mentoring</h4><p>One of my students, whom I mentored under the NSF REU program, presented a poster on the development and deployment of a machine learning model on an edge device for physical fatigue monitoring.</p></div></div>
-            <div class="g-card fade"><div class="g-card-img"><img src="nsf school demo.jpeg" alt="Team Collaboration"></div><div class="g-card-body"><h4>Team Collaboration</h4><p>Our lab collaborated with an education team to introduce K–12 students at Caldwell High School, Texas, to data sensing technologies. We conducted a four-day session focused on teaching data sensing in VR and supporting the development of students' career interests.</p></div></div>
-            <div class="g-card fade"><div class="g-card-img"><img src="1637836438064.jpg" alt="AI Summit"></div><div class="g-card-body"><h4>AI Summit Attendance</h4><p>Attended the Global AI summit at KinTex, South Korea.</p></div></div>
-            <div class="g-card fade"><div class="g-card-img"><img src="summerschool.jpg" alt="ECCC"></div><div class="g-card-body"><h4>European Council on Computing in Construction</h4><p>I attended the ECCC in 2021 to better understand the use of computing technologies such as AI in construction. The summer school was very successful.</p></div></div>
-            <div class="g-card fade"><div class="g-card-img"><img src="generated-image (2).png" alt="Campus Life"></div><div class="g-card-body"><h4>Campus Life</h4><p>Sample description text capturing moments from life at Texas A&amp;M University.</p></div></div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
-        <div class="section-label">Let's Connect</div>
-        <h2 class="section-title">Ready to collaborate?</h2>
-        <p class="section-sub">Whether you're looking for a research collaborator, need consulting on an ML project, or just want to talk AI, I'd love to hear from you.</p>
-        <div class="contact-grid">
-            <div class="c-card fade"><div class="icon">✉</div><h3>Email</h3><p>malikanjum833@gmail.com</p></div>
-            <div class="c-card fade"><div class="icon">📍</div><h3>Location</h3><p>College Station, Texas</p></div>
-        </div>
-        <div class="social-row">
-            <a href="https://www.linkedin.com/in/sharjeelanjum/" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com/sharjeel_anjum1" target="_blank">Twitter / X</a>
-            <a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-left">© 2024 Sharjeel Anjum · Built with research and caffeine ☕</div>
-        <div class="footer-right">
-            <a href="#about">About</a><a href="#experience">Work</a><a href="#publications">Publications</a><a href="#awards">Awards</a><a href="#contact">Contact</a>
-        </div>
-    </footer>
-    <div style="text-align:center;padding:.75rem;border-top:1px solid var(--border)">
-        <p class="footer-visit">Total Visitors: <script type="text/javascript" src="//counter.websiteout.net/js/7/0/0/0"></script></p>
-    </div>
-
-</main>
 
 <script>
-    // Mobile nav
-    const ham=document.getElementById('ham'),sidebar=document.getElementById('sidebar'),overlay=document.getElementById('overlay');
-    ham.addEventListener('click',()=>{sidebar.classList.toggle('open');overlay.classList.toggle('open')});
-    overlay.addEventListener('click',()=>{sidebar.classList.remove('open');overlay.classList.remove('open')});
-
-    // Active nav on scroll
-    const sections=document.querySelectorAll('.section,.hero');
-    const navLinks=document.querySelectorAll('.sidebar-links a');
-    window.addEventListener('scroll',()=>{
-        let cur='';
-        sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.getAttribute('id')});
-        navLinks.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active')});
-    });
-
-    // Close mobile on link click
-    document.querySelectorAll('.sidebar-links a').forEach(a=>{
-        a.addEventListener('click',()=>{sidebar.classList.remove('open');overlay.classList.remove('open')});
-    });
-
-    // Fade in on scroll
-    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+document.getElementById('navToggle').addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+}));
 </script>
 </body>
 </html>
