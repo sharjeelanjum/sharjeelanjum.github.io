@@ -45,10 +45,23 @@ img{max-width:100%;display:block}
 .topnav-inner{max-width:760px;margin:0 auto;padding:.9rem 1.75rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .topnav .brand{font-family:var(--serif);font-weight:600;font-size:1.02rem;color:var(--ink)}
 .topnav .brand span{color:var(--maroon)}
-.navlinks{display:flex;gap:1.3rem;flex-wrap:wrap}
+.navlinks{display:flex;gap:1.3rem;flex-wrap:wrap;align-items:center}
 .navlinks a{font-size:.82rem;font-weight:500;color:var(--body)}
 .navlinks a:hover{color:var(--maroon);text-decoration:none}
+.navlinks a.active{color:var(--maroon);font-weight:700}
 .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:.4rem .6rem;font-size:.85rem;color:var(--ink);cursor:pointer}
+
+/* NAV — "More" dropdown for secondary sections */
+.nav-dropdown{position:relative}
+.dropdown-toggle{background:none;border:none;font-family:inherit;font-size:.82rem;font-weight:500;color:var(--body);cursor:pointer;padding:0;display:flex;align-items:center;gap:.25rem}
+.dropdown-toggle:hover{color:var(--maroon)}
+.dropdown-toggle .car{font-size:.65rem;transition:transform .15s ease}
+.nav-dropdown:hover .dropdown-toggle .car,
+.nav-dropdown:focus-within .dropdown-toggle .car{transform:rotate(180deg)}
+.dropdown-menu{display:none;flex-direction:column;gap:.6rem;position:absolute;top:140%;right:0;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.7rem .9rem;min-width:150px;box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:60}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu{display:flex}
+.dropdown-menu a{white-space:nowrap}
 
 /* HEADER / HERO */
 header.profile{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
@@ -101,14 +114,17 @@ section:last-of-type{border-bottom:none}
 .tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem}
 .tags span{font-size:.68rem;font-weight:500;padding:.18rem .55rem;border-radius:4px;background:var(--tag-bg);color:var(--body)}
 
-/* RESEARCH INTERESTS - simple list not glossy cards */
-.interests{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem}
-.interest h4{font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
-.interest p{font-size:.84rem;color:var(--muted);line-height:1.6}
+/* RESEARCH INTERESTS — photo-led */
+.research-visual{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.research-photo{width:100%;height:340px;object-fit:cover}
+.research-caption{background:var(--paper2);padding:.9rem 1.1rem}
+.research-caption p{font-size:.78rem;color:var(--muted);margin-bottom:.55rem}
 
 /* PUBLICATIONS */
+.pub-group{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin:1.4rem 0 .4rem}
+.pub-group:first-child{margin-top:0}
 .pub{padding:.85rem 0;border-top:1px solid var(--line);font-size:.89rem}
-.pub:first-child{border-top:none;padding-top:0}
+.pub-group + .pub{border-top:none;padding-top:0}
 .pub-title{color:var(--ink);font-weight:600}
 .pub-meta{font-size:.78rem;color:var(--muted);margin-top:.2rem}
 .pub-meta .if{font-family:var(--mono);color:var(--maroon)}
@@ -144,10 +160,13 @@ footer{padding:2rem 0 3rem;font-size:.78rem;color:var(--muted);text-align:center
 @media(max-width:640px){
   .navlinks{display:none}
   .nav-toggle{display:inline-block}
-  .navlinks.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.75rem;gap:.8rem}
+  .navlinks.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.75rem;gap:.8rem}
+  .nav-dropdown{width:100%}
+  .dropdown-toggle{display:none}
+  .dropdown-menu{display:flex !important;position:static;box-shadow:none;border:none;padding:0;margin-top:.2rem;min-width:0}
   .profile-row{flex-direction:column;align-items:flex-start}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .interests{grid-template-columns:1fr}
+  .research-photo{height:220px}
   .gal-grid{grid-template-columns:1fr}
 }
 </style>
@@ -157,17 +176,22 @@ footer{padding:2rem 0 3rem;font-size:.78rem;color:var(--muted);text-align:center
 <nav class="topnav">
   <div class="topnav-inner">
     <div class="brand">Sharjeel Anjum <span>·</span> AI Researcher</div>
-    <button class="nav-toggle" id="navToggle">Menu</button>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">Menu</button>
     <div class="navlinks" id="navLinks">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#awards">Awards</a>
-      <a href="#mentorship">Mentorship</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">More <span class="car">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="#awards">Awards</a>
+          <a href="#mentorship">Mentorship</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
@@ -294,11 +318,17 @@ footer{padding:2rem 0 3rem;font-size:.78rem;color:var(--muted);text-align:center
 
   <section id="research">
     <div class="s-head"><h2 class="s-title">Research Interests</h2><span class="s-num">04</span></div>
-    <div class="interests">
-      <div class="interest"><h4>Adversarial Machine Learning</h4><p>Building robust models that withstand adversarial attacks in safety-critical deployments.</p></div>
-      <div class="interest"><h4>Real-World Automation</h4><p>Translating ML research into deployed systems for industrial and construction contexts.</p></div>
-      <div class="interest"><h4>Worker Safety Monitoring</h4><p>Computer vision and IoT-based systems for fall prevention and hazard detection.</p></div>
-      <div class="interest"><h4>Fatigue Detection Systems</h4><p>Personalized physiological monitoring to detect and predict muscle and cognitive fatigue.</p></div>
+    <div class="research-visual">
+      <img src="niagratalk.jpeg" alt="Sharjeel Anjum presenting research on embodied interaction at the CSCE Conference, Niagara Falls" class="research-photo">
+      <div class="research-caption">
+        <p>Presenting at the CSCE Conference, Niagara Falls — on embodied interaction for construction site inspection.</p>
+        <div class="tags">
+          <span>Adversarial Machine Learning</span>
+          <span>Real-World Automation</span>
+          <span>Worker Safety Monitoring</span>
+          <span>Fatigue Detection Systems</span>
+        </div>
+      </div>
     </div>
     <p style="margin-top:1.4rem"><a href="https://scholar.google.com/citations?user=tFpEQycAAAAJ&hl=en" target="_blank">View full Google Scholar profile →</a></p>
   </section>
@@ -408,6 +438,21 @@ document.getElementById('navToggle').addEventListener('click',()=>{
 document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('navLinks').classList.remove('open');
 }));
+
+// Scroll-spy: highlight the nav link for whichever section is currently in view
+const spySections = document.querySelectorAll('section[id], header[id]');
+const spyLinks = document.querySelectorAll('.navlinks a[href^="#"]');
+function updateActiveLink(){
+  let currentId = spySections[0] ? spySections[0].id : '';
+  spySections.forEach(sec=>{
+    if(window.scrollY >= sec.offsetTop - 140) currentId = sec.id;
+  });
+  spyLinks.forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+  });
+}
+window.addEventListener('scroll', updateActiveLink, {passive:true});
+window.addEventListener('load', updateActiveLink);
 </script>
 </body>
 </html>
